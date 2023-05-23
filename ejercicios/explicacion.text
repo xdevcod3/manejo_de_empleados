@@ -1,0 +1,45 @@
+## El código comienza definiendo un módulo llamado `MyEx` que contiene una clase llamada `Ex` 
+que hereda de `StandardError`. Esta clase se utiliza para definir una excepción personalizada
+que se lanzará en caso de que ocurra algún error específico en el código.
+
+A continuación, se definen dos clases: `Empleados` y `ManeoEmpleado`. La clase `Empleados` es una clase simple
+que tiene tres atributos: `nombre`, `apellido` y `salario`. La clase `ManeoEmpleado` hereda de `Empleados` y agrega
+funcionalidades adicionales para manejar la lista de empleados y realizar operaciones sobre ella.
+
+Dentro de la clase `ManeoEmpleado`, se definen varios métodos. Estos métodos incluyen:
+
+- `agregar_empleado(empleado)`:
+
+    Agrega un empleado a la lista de empleados. Si alguno de los atributos del empleado (nombre, apellido, salario)
+    está vacío, se lanza una excepción personalizada.
+
+- `monstrar_empleados`: 
+    
+    Muestra la lista de empleados. Si la lista está vacía, se lanza una excepción personalizada.
+
+- `salario_promedio`: 
+
+    Calcula y muestra el salario promedio de los empleados. Si la lista está vacía, se lanza una excepción personalizada.
+
+- `incrementar_salarios(nombre, apellido, porcentaje)`: 
+
+    Incrementa el salario de un empleado específico en un porcentaje dado. Se busca al empleado en la lista por su 
+    nombre y apellido. Si el porcentaje es menor o igual a cero, se lanza una excepción personalizada. Si la lista 
+    está vacía o el empleado no se encuentra en la lista, se lanzan excepciones personalizadas.
+
+- `guardar_csv`: 
+    
+    Guarda la lista de empleados en un archivo CSV llamado "empleados.csv". Si el archivo ya existe, agrega los 
+    empleados a él. Si la lista está vacía, se lanza una excepción personalizada.
+
+Después de definir las clases y los métodos, el código muestra un menú interactivo que permite al usuario seleccionar
+diferentes opciones. El usuario puede elegir ver los empleados, agregar empleados, incrementar el salario de un empleado,
+ver el salario promedio de los empleados y agregar los empleados a un archivo CSV. El programa se ejecuta hasta que el 
+usuario selecciona la opción para detenerlo.
+
+Cada opción del menú maneja posibles excepciones que pueden ocurrir durante la ejecución del programa y muestra mensajes 
+de error correspondientes. Después de cada opción, se espera a que el usuario presione Enter para volver al menú, y se
+ realiza un poco de limpieza en la pantalla.
+
+Finalmente, cuando el usuario selecciona la opción para detener el programa, se muestra el mensaje "Adios" y el programa
+termina su ejecución.
